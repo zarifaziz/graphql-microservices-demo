@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  users_service:
+    build: 
+      context: .
+      dockerfile: src/users_service/Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - PORT=8001
+
+  graphql_gateway:
+    build:
+      context: .
+      dockerfile: src/graphql_gateway/Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - users_service
+    environment:
+      - USERS_SERVICE_URL=http://users_service:8001 
