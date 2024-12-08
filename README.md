@@ -12,7 +12,7 @@ This project demonstrates how to use GraphQL as a gateway to combine multiple mi
 
 ## Project Structure
 ```
-python-graphql-example/
+graphql-microservices-demo/
 ├── src/
 │ ├── users_service/ # User management service
 │ ├── products_service/ # Product catalog service
