@@ -10,6 +10,15 @@ services:
     environment:
       - PORT=8001
 
+  products_service:
+    build:
+      context: .
+      dockerfile: src/products_service/Dockerfile
+    ports:
+      - "8002:8002"
+    environment:
+      - PORT=8002
+
   graphql_gateway:
     build:
       context: .
@@ -18,5 +27,7 @@ services:
       - "8000:8000"
     depends_on:
       - users_service
+      - products_service
     environment:
-      - USERS_SERVICE_URL=http://users_service:8001 
+      - USERS_SERVICE_URL=http://users_service:8001
+      - PRODUCTS_SERVICE_URL=http://products_service:8002 
