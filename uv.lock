@@ -1,5 +1,5 @@
 version = 1
-requires-python = ">=3.10.7"
+requires-python = ">=3.10"
 
 [[package]]
 name = "annotated-types"
@@ -530,6 +530,7 @@ dependencies = [
     { name = "fastapi" },
     { name = "httpx" },
     { name = "psycopg2-binary" },
+    { name = "pydantic" },
     { name = "requests" },
     { name = "sqlalchemy" },
     { name = "strawberry-graphql", extra = ["fastapi"] },
@@ -548,6 +549,7 @@ requires-dist = [
     { name = "fastapi", specifier = ">=0.115.6" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
+    { name = "pydantic", specifier = ">=2.10.3" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "sqlalchemy", specifier = ">=2.0.36" },
     { name = "strawberry-graphql", extras = ["fastapi"], specifier = ">=0.253.1" },
