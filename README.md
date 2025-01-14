@@ -14,12 +14,12 @@ This project demonstrates how to use GraphQL as a gateway to combine multiple mi
 ```
 graphql-microservices-demo/
 ├── src/
-│ ├── users_service/ # User management service
-│ ├── products_service/ # Product catalog service
-│ ├── graphql_gateway/ # GraphQL API gateway
-│ └── common/ # Shared utilities
-├── pyproject.toml # Project dependencies
-└── docker-compose.yml # Docker services configuration
+│ ├── users_service/      # User management REST service
+│ ├── products_service/   # Product catalog REST service
+│ ├── graphql_gateway/    # GraphQL API gateway
+│ └── common/             # Shared utilities
+├── pyproject.toml        
+└── docker-compose.yml    
 ```
 
 ## Build and start all services
